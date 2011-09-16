@@ -19,7 +19,7 @@ else
         date_table = data.at_xpath "//table[@class='bg_gry95 dgy12']"
         bill_date = date_table.at_xpath("//tr[2]/td[2]").content
         call_cutoff_date = date_table.at_xpath("//tr[3]/td[2]").content
-        video_call_time, call_time, three_call_time, total_call_time, data_usage, multimedia, sms,
+        data_usage, video_call_time, call_time, three_call_time, total_call_time, multimedia, sms,
             three_sms, cross_sms, inter_sms = data.xpath("//span[@class='keypro_u']").map { |v| v.content.to_i }
 
         puts "Cycle Start Date          : #{bill_date}"
