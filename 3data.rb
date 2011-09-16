@@ -39,7 +39,7 @@ else
         puts "    Inter-operator SMS    : #{cross_sms}"
         puts "    International SMS     : #{inter_sms}"
         puts "    " + "=" * 30
-        puts "    Total SMS             : #{sms}"
+        puts "    Total SMS             : #{[three_sms, cross_sms, inter_sms].inject(0) { |sum, v| sum += v.to_i }}"
     rescue 
         puts "Fail when communicating with three.com.hk"
     end
